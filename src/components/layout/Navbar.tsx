@@ -13,10 +13,12 @@ import {
   ChevronDown,
   Layers,
   Activity,
+  Scan,
 } from 'lucide-react';
 import { useAppData } from '../../context/AppDataContext';
 import { NavDropdown } from './NavDropdown';
 import { formatearFecha } from '../../lib/fechas';
+import { EscanerModal } from '../EscanerModal';
 
 const GRUPO_INVENTARIO = [
   { to: '/materiales', label: 'Materiales', icon: Boxes },
@@ -28,6 +30,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [notifOpen, setNotifOpen] = useState(false);
   const [userOpen, setUserOpen] = useState(false);
+  const [escanerOpen, setEscanerOpen] = useState(false);
   const alertasActivas = alertas.filter((a) => !a.atendida).length;
   const pendientes = alertas.filter((a) => !a.atendida);
 
@@ -97,6 +100,15 @@ export function Navbar() {
             Sistema activo
           </span>
           <span className="hidden text-xs text-[var(--color-text-faint)] xl:inline">Act.: {lastUpdate}</span>
+
+          <button
+            onClick={() => setEscanerOpen(true)}
+            className="flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-2.5 py-1.5 text-xs font-medium text-[var(--color-navy)] transition-colors hover:border-[var(--color-lavender)] hover:bg-[var(--color-surface-alt)]"
+            title="Escanear código de barras o QR de material"
+          >
+            <Scan className="h-4 w-4 text-[var(--color-lavender-muted)]" />
+            <span className="hidden md:inline">Escanear QR</span>
+          </button>
 
           <div className="relative">
             <button
@@ -196,6 +208,7 @@ export function Navbar() {
           </div>
         </div>
       )}
+      <EscanerModal open={escanerOpen} onClose={() => setEscanerOpen(false)} />
     </header>
   );
 }

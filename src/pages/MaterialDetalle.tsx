@@ -74,6 +74,22 @@ export function MaterialDetalle() {
               <dt className="flex items-center gap-2 text-[var(--color-text-faint)]"><User className="h-3.5 w-3.5" /> Responsable</dt>
               <dd className="text-[var(--color-text)]">{material.responsable}</dd>
             </div>
+            {material.lote && (
+              <div className="flex items-center justify-between border-t border-[var(--color-border)] pt-2.5">
+                <dt className="text-[var(--color-text-faint)]">Lote Activo (FIFO)</dt>
+                <dd className="font-mono text-xs font-semibold text-[var(--color-navy)] bg-[var(--color-pale-lime)] px-2 py-0.5 rounded border border-[var(--color-border)]">
+                  {material.lote}
+                </dd>
+              </div>
+            )}
+            {material.fechaVencimiento && (
+              <div className="flex items-center justify-between">
+                <dt className="text-[var(--color-text-faint)]">Fecha de Vencimiento</dt>
+                <dd className="text-xs font-medium text-[var(--color-status-amber)]">
+                  {formatearFecha(material.fechaVencimiento)}
+                </dd>
+              </div>
+            )}
           </dl>
         </div>
 

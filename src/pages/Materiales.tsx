@@ -149,12 +149,12 @@ export function Materiales() {
                 <dd>{m.ubicacion}</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-[var(--color-text-faint)]">Proveedor</dt>
-                <dd>{m.proveedor}</dd>
+                <dt className="text-[var(--color-text-faint)]">Lote activo</dt>
+                <dd className="font-mono font-medium text-[var(--color-navy)]">{m.lote ?? 'N/A'}</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-[var(--color-text-faint)]">Responsable</dt>
-                <dd>{m.responsable}</dd>
+                <dt className="text-[var(--color-text-faint)]">Vencimiento</dt>
+                <dd className="text-[var(--color-status-amber)] font-medium">{m.fechaVencimiento ?? 'N/A'}</dd>
               </div>
             </dl>
 

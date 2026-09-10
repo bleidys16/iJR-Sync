@@ -11,6 +11,8 @@ export interface MaterialBase {
   ubicacion: string;
   proveedor: string;
   responsable: string;
+  lote?: string;
+  fechaVencimiento?: string; // ISO date
 }
 
 export interface Material extends MaterialBase {
@@ -49,6 +51,8 @@ export interface RequerimientoBase {
   fechaNecesidad: string; // ISO date
   estado: EstadoRequerimiento;
   historialEstados: EventoRequerimiento[];
+  loteAsignado?: string;
+  fechaVencimientoLote?: string;
 }
 
 export interface Requerimiento extends RequerimientoBase {

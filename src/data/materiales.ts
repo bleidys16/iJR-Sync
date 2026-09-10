@@ -15,6 +15,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén General',
     proveedor: 'Petroquímica del Istmo',
     responsable: 'Marcela Vidal',
+    lote: 'LT-2026-0891',
+    fechaVencimiento: '2026-11-30',
   },
   {
     id: 'mat-02',
@@ -27,6 +29,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Bodega Insumos',
     proveedor: 'Química del Norte S.A.',
     responsable: 'Andrés Cárdenas',
+    lote: 'LT-2026-0412',
+    fechaVencimiento: '2026-09-28',
   },
   {
     id: 'mat-03',
@@ -39,6 +43,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Bodega Insumos',
     proveedor: 'Química del Norte S.A.',
     responsable: 'Andrés Cárdenas',
+    lote: 'LT-2026-0105',
+    fechaVencimiento: '2026-10-15',
   },
   {
     id: 'mat-04',
@@ -51,6 +57,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén Empaques',
     proveedor: 'Empaques Iberia',
     responsable: 'Paula Restrepo',
+    lote: 'LT-2026-9921',
+    fechaVencimiento: '2027-05-20',
   },
   {
     id: 'mat-05',
@@ -63,6 +71,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén Empaques',
     proveedor: 'Gráficas Continental',
     responsable: 'Paula Restrepo',
+    lote: 'LT-2026-8802',
+    fechaVencimiento: '2027-01-10',
   },
   {
     id: 'mat-06',
@@ -75,6 +85,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén Empaques',
     proveedor: 'Empaques Iberia',
     responsable: 'Diego Salazar',
+    lote: 'LT-2026-7450',
+    fechaVencimiento: '2026-12-15',
   },
   {
     id: 'mat-07',
@@ -87,6 +99,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén Empaques',
     proveedor: 'Cartonera del Valle',
     responsable: 'Diego Salazar',
+    lote: 'LT-2026-3390',
+    fechaVencimiento: '2027-08-30',
   },
   {
     id: 'mat-08',
@@ -99,6 +113,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Bodega Insumos',
     proveedor: 'Distribuidora Industrial LTZ',
     responsable: 'Camila Ortiz',
+    lote: 'LT-2026-1188',
+    fechaVencimiento: '2026-09-22',
   },
   {
     id: 'mat-09',
@@ -111,6 +127,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Bodega Insumos',
     proveedor: 'Distribuidora Industrial LTZ',
     responsable: 'Camila Ortiz',
+    lote: 'LT-2026-5541',
+    fechaVencimiento: '2027-04-18',
   },
   {
     id: 'mat-10',
@@ -123,6 +141,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Bodega Insumos',
     proveedor: 'Distribuidora Industrial LTZ',
     responsable: 'Rodrigo Peña',
+    lote: 'LT-2026-9012',
+    fechaVencimiento: '2028-01-01',
   },
   {
     id: 'mat-11',
@@ -135,6 +155,8 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén General',
     proveedor: 'Maderas y Pallets S.A.S.',
     responsable: 'Rodrigo Peña',
+    lote: 'LT-2026-4410',
+    fechaVencimiento: '2028-12-31',
   },
   {
     id: 'mat-12',
@@ -147,5 +169,7 @@ export const MATERIALES_BASE: MaterialBase[] = [
     ubicacion: 'Almacén Empaques',
     proveedor: 'Empaques Iberia',
     responsable: 'Marcela Vidal',
+    lote: 'LT-2026-6632',
+    fechaVencimiento: '2027-09-15',
   },
 ];

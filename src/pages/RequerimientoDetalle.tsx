@@ -107,6 +107,22 @@ export function RequerimientoDetalle() {
               <dt className="flex items-center gap-2 text-[var(--color-text-faint)]"><Calendar className="h-3.5 w-3.5" /> Necesario para</dt>
               <dd className="text-[var(--color-text)]">{formatearFecha(requerimiento.fechaNecesidad)}</dd>
             </div>
+            {material?.lote && (
+              <div className="flex items-center justify-between border-t border-[var(--color-border)] pt-2.5">
+                <dt className="text-[var(--color-text-faint)]">Lote Asignado (FIFO)</dt>
+                <dd className="font-mono text-xs font-semibold text-[var(--color-navy)] bg-[var(--color-pale-lime)] px-2 py-0.5 rounded border border-[var(--color-border)]">
+                  {requerimiento.loteAsignado ?? material.lote}
+                </dd>
+              </div>
+            )}
+            {material?.fechaVencimiento && (
+              <div className="flex items-center justify-between">
+                <dt className="text-[var(--color-text-faint)]">Vencimiento del lote</dt>
+                <dd className="text-xs font-medium text-[var(--color-status-amber)]">
+                  {formatearFecha(requerimiento.fechaVencimientoLote ?? material.fechaVencimiento)}
+                </dd>
+              </div>
+            )}
             {requerimiento.entregadoATiempo !== null && (
               <div className="flex items-center justify-between border-t border-[var(--color-border)] pt-3">
                 <dt className="text-[var(--color-text-faint)]">Entregado a tiempo</dt>
