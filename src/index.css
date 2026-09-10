@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Calling Code';
+  src: url('/CallingCode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Calling Code', monospace, system-ui, sans-serif;
 
   /* iJR product family palette — modern SaaS, light */
   --color-lavender: #c2a5f9;
