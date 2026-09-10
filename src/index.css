@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  /* iJR product family palette — modern SaaS, light */
+  --color-lavender: #c2a5f9;
+  --color-lavender-muted: #a18cc9;
+  --color-lime: #dcf474;
+  --color-navy: #222132;
+  --color-soft-white: #f7f7f5;
+  --color-white: #ffffff;
+  --color-pale-lime: #f4f6ed;
+  --color-soft-gray: #e4e4cf;
+
+  /* Semantic roles used throughout the app. Re-theming only ever happens here. */
+  --color-bg: var(--color-soft-white); /* page background */
+  --color-surface: var(--color-white); /* card / surface background */
+  --color-surface-alt: var(--color-pale-lime); /* elevated surface: dropdowns, tooltips */
+  --color-border: var(--color-soft-gray); /* borders + neutral chips */
+  --color-text: var(--color-navy); /* primary text, headings, strong values */
+  --color-text-soft: rgba(34, 33, 50, 0.72); /* secondary-emphasis text, focus borders */
+  --color-text-faint: var(--color-lavender-muted); /* tertiary text, labels, captions */
+
+  /* status colors — used for material/requirement pipeline state, not free accents */
+  --color-status-red: #d33036;
+  --color-status-red-bg: rgba(229, 72, 77, 0.14);
+  --color-status-amber: #a6690a;
+  --color-status-amber-bg: rgba(245, 165, 36, 0.16);
+  --color-status-green: #1e874a;
+  --color-status-green-bg: rgba(69, 179, 107, 0.14);
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse-soft {
+  animation: pulseSoft 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin 1s linear infinite;
+}
