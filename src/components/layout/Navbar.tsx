@@ -8,7 +8,6 @@ import {
   Bell,
   BarChart3,
   Settings,
-  Link2,
   Menu,
   X,
   ChevronDown,
@@ -43,9 +42,11 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-surface)]/95 backdrop-blur">
       <div className="flex h-16 items-center gap-2 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="mr-2 flex shrink-0 items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-lavender)] text-[var(--color-navy)]">
-            <Link2 className="h-4.5 w-4.5" />
-          </span>
+          <svg viewBox="0 0 64 64" className="h-8 w-8 shrink-0 rounded-lg" aria-hidden="true">
+            <rect x="0" y="0" width="64" height="64" rx="16" fill="#222132" />
+            <rect x="9" y="23" width="26" height="18" rx="9" fill="none" stroke="#C2A5F9" strokeWidth="6.5" />
+            <rect x="29" y="23" width="26" height="18" rx="9" fill="none" stroke="#DCF474" strokeWidth="6.5" />
+          </svg>
           <span className="hidden sm:block">
             <span className="block text-[14px] font-semibold leading-tight text-[var(--color-text)]">iJR Sync</span>
             <span className="block text-[10px] leading-tight text-[var(--color-text-faint)]">Producción · Logística</span>
